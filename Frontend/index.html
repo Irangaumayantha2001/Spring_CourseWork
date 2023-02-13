@@ -2,9 +2,600 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Car Rental System</title>
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/home.css">
+    <style>
+        .banner-image {
+            background-image: url("assets/images/bg_1.jpg");
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3" style="background-color:#FCE22A; margin: auto">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Easy Car Rental PVT LTD</a>
 
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-0 text-black" style="position: relative; ">
+                <li class="nav-item " id="navHome" style="position: relative; padding-left: 30px;">
+                    <a aria-current="page" class="nav-link active" style="cursor: pointer; color: black">Home</a>
+                </li>
+
+                <li class="nav-item" id="navPlacedOrders" style="position: relative; padding-left: 30px;  ">
+                    <a href="#" aria-current="page" class="nav-link active" style="cursor: pointer; color: black">Admin</a>
+                </li>
+
+                <li class="nav-item" id="navCertifications" style="position: relative; padding-left: 30px">
+                    <a href="#" aria-current="page" class="nav-link active"
+                       style="cursor: pointer; color: black">Driver</a>
+                </li>
+
+                <li class="nav-item" id="navProcess" style="position: relative; padding-left: 30px">
+                    <a href="#" aria-current="page" class="nav-link active" style="cursor: pointer; color: black">Login</a>
+                </li>
+
+                <li class="nav-item" id="navGallery" style="position: relative; padding-left: 30px">
+                    <a href="#" aria-current="page" class="nav-link active" style="cursor: pointer; color: black">Sign up</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+>
+    <div class="content text-center" style=" margin-bottom: 260px; text-decoration: #1e2125; " >
+        <h1 class="topic">Welcome Easy Way Rent Your Car</h1>
+    </div>
+</div>
+<section id="sectionGeneralCars">
+    <!--<h1 id="topicGeneralCars">General Cars</h1>-->
+    <h3 id="topicGeneralCars" class="text-center lead  display-4 m-5" data-aos="fade-up">General Cars</h3>
+    <div class="col bg-transparent" id="carTable">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-black text-black ">
+            <tr>
+                <th>Car Images</th>
+                <th>Brand</th>
+                <th>Details</th>
+                <th>Price</th>
+                <th>Rent</th>
+            </tr>
+            </thead>
+            <tbody id="tblCustomerJson">
+            <tr>
+                <td class="col-3">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title ">Suzuki Alto - Premium </h5>
+                        <p class="card-text">Good Condition, 250 max speed.
+                            Rent Price for 30 days Rs.64,350.00.</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.2500.00/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn " type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade2">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki Alto K10 </h5>
+                        <p class="card-text">Good Condition,Max seed 140,
+                            Rent Price for 30 days Rs.71,390.00</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.3000.00/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki Celerio</h5>
+                        <p class="card-text">Good Condition,Max speed 152,
+                            Rent Price for 30 days Rs.77,220.00</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.2400.00/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade4">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td>
+                    <div class="card-body">
+                        <h5 class="card-title">Perodua (Daihatsu) Axia </h5>
+                        <p class="card-text">Good Condition,Max speed 180.
+                            Rent Price for 30 days Rs.90,200.00.</p>
+                    </div>
+                </td>
+                <td>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li class="list-group-item"><b>Rs.3800/day</b></li>
+                    </ul>
+                </td>
+                <td>
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+<section class="carCardPrem">
+    <h3 id="premiumCars" class="text-center lead  display-4 m-5" data-aos="fade-up">Premium Cars</h3>
+
+    <div class="col bg-transparent" id="carTablePre">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-black text-black">
+            <tr>
+                <th>Car Images</th>
+                <th>Brand</th>
+                <th>Details</th>
+                <th>Price</th>
+                <th>Rent</th>
+            </tr>
+            </thead>
+            <tbody id="tblCustomerJsonPre">
+            <tr>
+                <td class="col-3">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFadePre">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title ">Toyota Corolla Axio/ NZE141 </h5>
+                        <p class="card-text">Good Condition, 250 max speed.
+                            Rent Price for 30 days Rs120,330.00.</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.5500.00/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade2Pre">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Perodua Bezza Prime Sedan </h5>
+                        <p class="card-text">Good Condition,Max seed 140,
+                            Rent Price for 30 days Rs.120,330.00.</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs5500.00/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade3Pre">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Allion NZT</h5>
+                        <p class="card-text">Good Condition,Max speed 152,
+                            Rent Price for 30 days Rs.155,760.00.</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.5800.00/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade4Pre">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td>
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Axio NKR 165 </h5>
+                        <p class="card-text">Good Condition,Max speed 180.
+                            Rent Price for 30 days Rs.175,230.00.</p>
+                    </div>
+                </td>
+                <td>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li class="list-group-item"><b>Rs.6000.00/day</b></li>
+                    </ul>
+                </td>
+                <td>
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+<section id="sectionCarLuxery">
+    <h3 id="luxeryCars" class="text-center lead  display-4 m-5" data-aos="fade-up">Luxury Cars</h3>
+
+    <div class="col bg-transparent" id="carTableLux">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-black text-black">
+            <tr>
+                <th>Car Images</th>
+                <th>Brand</th>
+                <th>Details</th>
+                <th>Price</th>
+                <th>Rent</th>
+            </tr>
+            </thead>
+            <tbody id="tblCustomerJsonLux">
+            <tr>
+                <td class="col-3">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFadeLux">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title ">Toyota Premio </h5>
+                        <p class="card-text">Good Condition, 250 max speed.
+                            Rent Price for 30 days Rs.227,150.00.</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.10,000/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade2Lux">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mercedes </h5>
+                        <p class="card-text">Good Condition,Max seed 140,
+                            Rent Price for 30 days Rs.300,000.00.</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.18,000/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-3">
+                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade3Lux">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-3">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW i8</h5>
+                        <p class="card-text">Good Condition,Max speed 152,
+                            Rent Price for 30 days Rs.300,000.00.</p>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                        <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                        <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                    </ul>
+                </td>
+                <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>Rs.18,000.00/day</b></li>
+                    </ul>
+                </td>
+                <td class="col-1">
+                    <button class="rentCarBtn" type="button">Rent Car</button>
+                </td>
+
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
