@@ -88,3 +88,32 @@ function searchDriver(userType, username, password) {
         });
     }
 }
+
+$('#btnLogin').click(function () {
+
+    if ($('#userName').val() != "" && $('#password').val() != "") {
+        loginUser();
+    }
+});
+
+$('#userName,#password').on('blur', function () {
+    addLoginFormValidation();
+});
+
+function addLoginFormValidation() {
+    var username = $("#userName").val();
+    if (regLoginUsername.test(username)) {
+        $("#userName").css('border', '2px solid green');
+        var password = $('#password').val();
+        if (regLoginPassword.test(password)) {
+            $("#password").css('border', '2px solid green');
+            return true;
+        } else {
+            $("#password").css('border', '2px solid red');
+            return false;
+        }
+    } else {
+        $("#userName").css('border', '2px solid red');
+        return false;
+    }
+}
