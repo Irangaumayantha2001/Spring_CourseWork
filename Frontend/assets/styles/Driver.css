@@ -1,0 +1,46 @@
+.navbar-brand{
+    font-size: 25px;
+    position: relative;
+    top: 3px;
+    left: 30px;
+    letter-spacing: 0.5px;
+
+}
+
+#brandName {
+    color: #81b2ef;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    font-family: cursive;
+    left: -20px;
+    letter-spacing: 5.8px;
+
+}
+
+#schedule{
+    position: relative;
+    color: #1500c6;
+    top: 30px;
+    left: 41%;
+    letter-spacing: 2.8px;
+    font-family: inherit;
+}
+
+#name{
+    position: relative;
+    left: 85%;
+    top: -31px;
+    font-size: 21px;
+    font-family: initial;
+    letter-spacing: 0.5px;
+}
+
+#table{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 50px;
+}
+
