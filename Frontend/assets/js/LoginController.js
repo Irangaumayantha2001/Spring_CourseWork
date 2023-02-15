@@ -66,3 +66,25 @@ function searchAdmin(userType, username, password) {
         });
     }
 }
+function searchDriver(userType, username, password) {
+    if (userType === "Driver") {
+        $.ajax({
+            url: baseUrl2 + "/" + username + "/" + password,
+            method: "GET",
+            success: function (res) {
+                if (res.data === true) {
+                    loginSave(userType,username,password);
+                    location.replace("DriverPage.html");
+                } else {
+                    /*swal.fire({
+                        icon: 'warning',
+                        title: 'Oops...',
+                        text: 'User Name or Password Not matching!' + '\n' +
+                            ' Please use the Register Button to create a new account',
+                    })*/
+                    alert(res.massage);
+                }
+            }
+        });
+    }
+}
