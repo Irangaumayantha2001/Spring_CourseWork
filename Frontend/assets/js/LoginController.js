@@ -117,3 +117,60 @@ function addLoginFormValidation() {
         return false;
     }
 }
+
+$('#userName').on('keyup', function (event) {
+    setLoginButtonDisableOrNot();
+    if (event.key === "Enter") {
+        checkIfLoginUserFormValid();
+    }
+});
+$('#password').on('keyup', function (event) {
+    setLoginButtonDisableOrNot();
+    if (event.key === "Enter") {
+        checkIfLoginUserFormValid();
+    }
+});
+
+function setLoginButtonDisableOrNot() {
+    let check = addLoginFormValidation();
+    if (check) {
+        $("#btnLogin").prop('disabled', false);
+    } else {
+        $("#btnLogin").prop('disabled', true);
+    }
+}
+
+function checkIfLoginUserFormValid() {
+    var username = $('#userName').val();
+    if (regLoginUsername.test(username)) {
+        $('#password').focus();
+        var password = $('#password').val();
+        var response = regLoginPassword.test(password);
+        if (response) {
+            loginUser();
+        } else {
+            $('#password').focus();
+        }
+    } else {
+        $('#userName').focus();
+    }
+}
+
+
+function addLoginFormValidation() {
+    var username = $("#userName").val();
+    if (regLoginUsername.test(username)) {
+        $("#userName").css('border', '2px solid green');
+        var password = $('#password').val();
+        if (regLoginPassword.test(password)) {
+            $("#password").css('border', '2px solid green');
+            return true;
+        } else {
+            $("#password").css('border', '2px solid red');
+            return false;
+        }
+    } else {
+        $("#userName").css('border', '2px solid red');
+        return false;
+    }
+}
