@@ -1,3 +1,9 @@
+
+
+
+var baseUrl1="http://localhost:8080/Backend_war/api/v1/admin"
+
+
 $('#txtUserName,#txtPassword,#txtName,#txtContact,#txtAddress,#txtEmail,#txtLicene,#txtNIC,#imgNiCFront,#imgNiCBack,#imgLicence').on('keydown', function (event) {
     if (event.key == "Tab") {
         event.preventDefault();
@@ -76,11 +82,6 @@ function generateCustomerId() {
         }
     })
 }
-
-//add customer and admin
-
-
-
 
 
 
