@@ -1,6 +1,7 @@
 package org.example.adviser;
 
 
+import org.example.util.ResponseUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
