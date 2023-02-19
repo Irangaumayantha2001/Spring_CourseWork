@@ -1,6 +1,8 @@
 package org.example.service.impl;
 
+
 import org.example.dto.DriverDTO;
+import org.example.entity.Driver;
 import org.example.repo.DriverRepo;
 import org.example.service.DriverService;
 import org.modelmapper.ModelMapper;
@@ -10,15 +12,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Service
 @Transactional
 public class DriverServiceImpl implements DriverService {
-
     @Autowired
     DriverRepo repo;
 
     @Autowired
     ModelMapper mapper;
+
 
     @Override
     public void saveDriver(DriverDTO dto) {
@@ -64,12 +67,12 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public boolean findDriverByUsername(String username) {
-        return repo.findDriverByUsername(username).isPresent();
+       return repo.findDriverByUsername(username).isPresent();
     }
 
     @Override
     public boolean findDriverByPassword(String password) {
-        return repo.findDriverByPassword(password).isPresent();
+        return findDriverByPassword(password).isPresent();
     }
 
     @Override

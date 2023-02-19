@@ -1,5 +1,7 @@
 package org.example.service;
 
+import org.example.dto.DriverDTO;
+
 import java.util.List;
 
 public interface DriverService {
