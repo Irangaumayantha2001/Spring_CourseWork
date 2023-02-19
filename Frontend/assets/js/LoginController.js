@@ -76,12 +76,7 @@ function searchDriver(userType, username, password) {
                     loginSave(userType,username,password);
                     location.replace("DriverPage.html");
                 } else {
-                    /*swal.fire({
-                        icon: 'warning',
-                        title: 'Oops...',
-                        text: 'User Name or Password Not matching!' + '\n' +
-                            ' Please use the Register Button to create a new account',
-                    })*/
+
                     alert(res.massage);
                 }
             }
