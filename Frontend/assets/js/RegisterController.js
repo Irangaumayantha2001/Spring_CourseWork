@@ -2,6 +2,7 @@
 
 
 var baseUrl1="http://localhost:8080/Backend_war/api/v1/admin"
+var baseUrl3="http://localhost:8080/Backend_war/api/v1/customer"
 
 
 $('#txtUserName,#txtPassword,#txtName,#txtContact,#txtAddress,#txtEmail,#txtLicene,#txtNIC,#imgNiCFront,#imgNiCBack,#imgLicence').on('keydown', function (event) {

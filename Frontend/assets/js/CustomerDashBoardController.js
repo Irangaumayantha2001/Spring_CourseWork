@@ -10,7 +10,7 @@ getLastLoginUser();
 
 function getLastLoginUser() {
     $.ajax({
-        url: "http://localhost:8080/Back_End_war/api/v1/login/getLastLogin",
+        url: "http://localhost:8080/Backend_war/api/v1/login/getLastLogin",
         method: "GET",
         success: function (res) {
             let login = res.data;
@@ -22,7 +22,7 @@ function getLastLoginUser() {
 
 function getAllUserData(username, password) {
     $.ajax({
-        url: "http://localhost:8080/Back_End_war/api/v1/customer/set/" + username + "/" + password,
+        url: "http://localhost:8080/Backend_war/api/v1/customer/set/" + username + "/" + password,
         method: "GET",
         success: function (res) {
             let customer = res.data;

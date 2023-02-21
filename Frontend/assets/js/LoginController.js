@@ -1,3 +1,13 @@
+let regLoginUsername = /^[A-z0-9]{6,10}$/;
+let regLoginPassword = /^[A-z0-9@#$%&!*]{8,}$/;
+
+
+var baseUrl1="http://localhost:8080/Backend_war/api/v1/admin"
+var baseUrl2="http://localhost:8080/Backend_war/api/v1/driver"
+var baseUrl3="http://localhost:8080/Backend_war/api/v1/customer"
+var baseUrl = "http://localhost:8080/Back_End_war/";
+
+
 function loginUser(){
     var username=$('#userName').val();
     var password=$('#password').val();
@@ -66,6 +76,8 @@ function searchAdmin(userType, username, password) {
         });
     }
 }
+
+
 function searchDriver(userType, username, password) {
     if (userType === "Driver") {
         $.ajax({
@@ -75,6 +87,24 @@ function searchDriver(userType, username, password) {
                 if (res.data === true) {
                     loginSave(userType,username,password);
                     location.replace("DriverPage.html");
+                } else {
+
+                    alert(res.massage);
+                }
+            }
+        });
+    }
+}
+
+function searchCustomer(userType, username, password) {
+    if (userType === "Customer") {
+        $.ajax({
+            url: baseUrl3 + "/" + username + "/" + password,
+            method: "GET",
+            success: function (res) {
+                if (res.data === true) {
+                    loginSave(userType,username,password);
+                    location.replace("CustomerDashBoard.html");
                 } else {
 
                     alert(res.massage);
