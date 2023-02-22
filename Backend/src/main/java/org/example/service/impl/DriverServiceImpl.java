@@ -72,7 +72,7 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public boolean findDriverByPassword(String password) {
-        return findDriverByPassword(password).isPresent();
+        return repo.findDriverByPassword(password).isPresent();
     }
 
     @Override
@@ -106,18 +106,18 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public List<DriverDTO> getRandomDriver() {
-        return mapper.map(repo.getAllNonAvailableDrivers(), new TypeToken<List<DriverDTO>>() {
+        return mapper.map(repo.getRandomDriver(), new TypeToken<List<DriverDTO>>() {
         }.getType());
     }
 
     @Override
     public List<DriverDTO> getAllNonAvailableDrivers() {
-        return repo.getCountOfDriversByStatus(availability);
+        return mapper.map(repo.getAllNonAvailableDrivers(), new TypeToken<List<DriverDTO>>() {
+        }.getType());
     }
 
     @Override
     public int getCountOfDriversByStatus(boolean availability) {
-        return mapper.map(repo.getRandomDriver(), new TypeToken<List<DriverDTO>>() {
-        }.getType());
+        return repo.getCountOfDriversByStatus(availability);
     }
 }
