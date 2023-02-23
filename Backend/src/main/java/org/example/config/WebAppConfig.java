@@ -10,8 +10,5 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @ComponentScan(basePackages = "org.example")
 public class WebAppConfig {
-    @Bean
-    public ModelMapper modelMapper(){
-        return new ModelMapper();
-    }
+
 }

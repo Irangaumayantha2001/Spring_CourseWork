@@ -1,10 +1,12 @@
 package org.example.config;
 
 import javafx.application.Platform;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -26,6 +28,9 @@ import java.sql.DriverManager;
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
 public class JPAConfig {
+
+    @Autowired
+    Environment env;
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(DataSource ds, JpaVendorAdapter va) {
