@@ -1,4 +1,4 @@
-let baseUrl2 = "http://localhost:8080/Back_End_war/";
+let baseUrl2 = "http://localhost:8080/Backend_war/";
 
 let regDrivingLicenceNo = /^(B)[0-9]{7}$/;
 let regName = /^[A-z .]{3,}$/;

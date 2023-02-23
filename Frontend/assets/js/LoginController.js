@@ -5,7 +5,7 @@ let regLoginPassword = /^[A-z0-9@#$%&!*]{8,}$/;
 var baseUrl1="http://localhost:8080/Backend_war/api/v1/admin"
 var baseUrl2="http://localhost:8080/Backend_war/api/v1/driver"
 var baseUrl3="http://localhost:8080/Backend_war/api/v1/customer"
-var baseUrl = "http://localhost:8080/Back_End_war/";
+var baseUrl = "http://localhost:8080/Backend_war/";
 
 
 function loginUser(){

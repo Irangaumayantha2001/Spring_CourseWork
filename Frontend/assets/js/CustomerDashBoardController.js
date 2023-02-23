@@ -90,20 +90,20 @@ function setCarDataToFields(car) {
 
     let frontViewPath = car.frontViewImg;
     console.log(frontViewPath);
-    let frontViewImg = frontViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
+    let frontViewImg = frontViewPath.split("")[1];
     let FrontViewImgSrc = "savedImages\\Cars\\" + frontViewImg;
 
     let backViewPath = car.backViewImg;
-    let backViewImg = backViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
+    let backViewImg = backViewPath.split("")[1];
     let backViewImgSrc = "savedImages\\Cars\\" + backViewImg;
     console.log(backViewImgSrc);
 
     let sideViewPath = car.sideViewImg;
-    let sideViewImg = sideViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
+    let sideViewImg = sideViewPath.split("")[1];
     let sideViewImgSrc = "savedImages\\Cars\\" + sideViewImg;
 
     let interiorViewPath = car.internalViewImg;
-    let interiorViewImg = interiorViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
+    let interiorViewImg = interiorViewPath.split("")[1];
     let interiorViewImgSrc = "savedImages\\Cars\\" + interiorViewImg;
 
     let fvImg = `<img src=${FrontViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
@@ -141,7 +141,7 @@ function clearRentalFields() {
 
 function generateRentId() {
     $.ajax({
-        url: "http://localhost:8080/Back_End_war/api/v1/CarRent/generateRentId",
+        url: "http://localhost:8080/Backend_war/api/v1/CarRent/generateRentId",
         method: "GET",
         success: function (res) {
             $('#txtCarRentId').val(res.data);
@@ -150,7 +150,7 @@ function generateRentId() {
 }
 function generatePaymentId() {
     $.ajax({
-        url: "http://localhost:8080/Back_End_war/api/v1/payment/generatePaymentId",
+        url: "http://localhost:8080/Backend_war/api/v1/payment/generatePaymentId",
         method: "GET",
         success: function (res) {
             $('#txtPaymentId').val(res.data);
