@@ -16,7 +16,7 @@ public class CarRentController {
     @Autowired
     CarRentService service;
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping
     public ResponseUtil getAllCarRents(){
         return new ResponseUtil(200,"ok",service.getAllCarRents());
     }
@@ -32,7 +32,7 @@ public class CarRentController {
         service.updateCarRent(dto);
         return new ResponseUtil(200, "Updated", true);
     }
-    @DeleteMapping(params = {"rentId"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(params = {"rentId"})
     public ResponseUtil deleteCarRent(@RequestParam String rentId) {
         service.deleteCarRent(rentId);
         return new ResponseUtil(200, "Deleted", true);
