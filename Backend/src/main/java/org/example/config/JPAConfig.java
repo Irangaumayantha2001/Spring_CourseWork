@@ -1,6 +1,7 @@
 package org.example.config;
 
 import javafx.application.Platform;
+import org.example.repo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,18 +25,19 @@ import java.sql.DriverManager;
 
 
 @Configuration
-@EnableJpaRepositories(basePackages = "org.example.repo")
+@EnableJpaRepositories(basePackageClasses = {AdminRepo.class, CarRepo.class, CarRentRepo.class, CustomerRepo.class, DriverRepo.class,LoginRepo.class,PaymentRepo.class})
+
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
 public class JPAConfig {
 
     @Autowired
-    Environment env;
+    private Environment env;
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(DataSource ds, JpaVendorAdapter va) {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-        factoryBean.setPackagesToScan("org.example.entity");
+        factoryBean.setPackagesToScan(env.getRequiredProperty("pro.entity"));
         factoryBean.setDataSource(ds);
         factoryBean.setJpaVendorAdapter(va);
     return factoryBean;
@@ -45,10 +47,10 @@ public class JPAConfig {
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true");
-        ds.setUsername("iranga");
-        ds.setPassword("1234");
+        ds.setDriverClassName(env.getRequiredProperty("pro.driver"));
+        ds.setUrl(env.getRequiredProperty("pro.url"));
+        ds.setUsername(env.getRequiredProperty("pro.username"));
+        ds.setPassword(env.getRequiredProperty("pro.password"));
         return ds;
     }
 
@@ -56,7 +58,7 @@ public class JPAConfig {
     public  JpaVendorAdapter jpaVendorAdapter(){
         HibernateJpaVendorAdapter va = new HibernateJpaVendorAdapter();
         va.setDatabase(Database.MYSQL);
-        va.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
+        va.setDatabasePlatform(env.getRequiredProperty("pro.dial"));
         va.setGenerateDdl(true);
         va.setShowSql(true);
         return va;
