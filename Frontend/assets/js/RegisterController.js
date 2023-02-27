@@ -307,49 +307,50 @@ function checkInputPassword() {
     }
 }
 
+function addCustomer() {
 // Add customer
-let id = $('#txtUserID').val();
-let name = $('#txtName').val();
-let address = $('#txtAddress').val();
-let contactNo = $('#txtContact').val();
-let email = $('#txtEmail').val();
-let nicNo = $('#txtNIC').val();
-let licenceNo = $('#txtLicene').val();
-let username = $('#txtUserName').val();
-let password = $('#txtPassword').val();
+    let id = $('#txtUserID').val();
+    let name = $('#txtName').val();
+    let address = $('#txtAddress').val();
+    let contactNo = $('#txtContact').val();
+    let email = $('#txtEmail').val();
+    let nicNo = $('#txtNIC').val();
+    let licenceNo = $('#txtLicene').val();
+    let username = $('#txtUserName').val();
+    let password = $('#txtPassword').val();
 
-var customer = {
-    customerId: id,
-    name: name,
-    address: address,
-    contactNo: contactNo,
-    email: email,
-    nicNo: nicNo,
-    licenceNo: licenceNo,
-    username: username,
-    password: password
-}
-
-console.log(customer);
-
-$.ajax({
-    url: baseUrl3,
-    method: "POST",
-    contentType: "application/json",
-    data: JSON.stringify(customer),
-    success: function (resp) {
-        uploadCustomerImages(id);
-
-        alert(resp.massage);
-        console.log("Success");
-    },
-    error: function (ob) {
-
-        alert(ob.massage);
-        console.log("Error");
+    var customer = {
+        customerId: id,
+        name: name,
+        address: address,
+        contactNo: contactNo,
+        email: email,
+        nicNo: nicNo,
+        licenceNo: licenceNo,
+        username: username,
+        password: password
     }
-})
 
+    console.log(customer);
+
+    $.ajax({
+        url: baseUrl3,
+        method: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(customer),
+        success: function (resp) {
+            uploadCustomerImages(id);
+
+            alert(resp.massage);
+            console.log("Success");
+        },
+        error: function (ob) {
+
+            alert(ob.massage);
+            console.log("Error");
+        }
+    })
+}
 
 function uploadCustomerImages(id) {
     var fileObjectNic1 = $('#imgNiCFront')[0].files[0];

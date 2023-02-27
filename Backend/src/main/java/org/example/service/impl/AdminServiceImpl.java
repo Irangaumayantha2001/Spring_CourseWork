@@ -27,7 +27,7 @@ public class AdminServiceImpl implements AdminService {
 
        if(!repo.existsById(dto.getAdminId()))
 
-    {//======================================================change=============
+    {
         repo.save(mapper.map(dto, Admin.class));
     } else
 
@@ -39,7 +39,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public void updateAdmin(AdminDTO dto) {
-        if (repo.existsById(dto.getAdminId())) {//========================================================change==============
+        if (repo.existsById(dto.getAdminId())) {
             repo.save(mapper.map(dto, Admin.class));
         } else {
             throw new RuntimeException("No Such Admin to update");

@@ -11,5 +11,5 @@ public interface AdminRepo extends JpaRepository<Admin, String> {
     Optional<Admin> findAdminByPassword(String password);
 
     @Query(value = "SELECT adminId FROM Admin ORDER BY adminId DESC LIMIT 1",nativeQuery = true)
-    String generateAdminId();
+   String generateAdminId();
 }
