@@ -84,6 +84,11 @@ function generateCustomerId() {
     })
 }
 
+$('#txtName,#txtAddress,#txtContact,#txtNIC,#txtLicene,#txtEmail,#txtUserName,#txtPassword').on('keyup', function (event) {
+    if (event.key == "Enter") {
+        checkIfSignUpUserFormValid();
+    }
+});
 
 
 // Add regs
@@ -99,11 +104,7 @@ let regLoginPassword = /^[A-z0-9@#$%&!*]{8,}$/;
 
 
 //signUp validation
-$('#txtName,#txtAddress,#txtContact,#txtNIC,#txtLicene,#txtEmail,#txtUserName,#txtPassword').on('keyup', function (event) {
-    if (event.key == "Enter") {
-        checkIfSignUpUserFormValid();
-    }
-});
+
 
 function checkIfSignUpUserFormValid() {
     var name = $('#txtName').val();
