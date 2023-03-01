@@ -19,7 +19,7 @@ import java.io.IOException;
 public class CarController {
 
     @Autowired
-    CarService service;
+   private CarService service;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getAllCars() {
@@ -71,7 +71,7 @@ public class CarController {
     @PutMapping(path = "/up/{registrationID}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil uploadImagesAndPath(@RequestPart("frontImg") MultipartFile frontImg, @RequestPart("backImg") MultipartFile backImg, @RequestPart("interImg") MultipartFile interImg, @RequestPart("sideImg") MultipartFile sideImg, @PathVariable String registrationID) {
         try {
-            String projectPath = String.valueOf(new File(""));
+            String projectPath = String.valueOf(new File("/home/iranga/Documents/IJSE Coursework/Spring_courseWork/CAr-Rental-System/Frontend/assets/images/"));
             File uploadsDir = new File(projectPath + "\\Cars");
             uploadsDir.mkdir();
             frontImg.transferTo(new File(uploadsDir.getAbsolutePath() + "\\" + frontImg.getOriginalFilename()));

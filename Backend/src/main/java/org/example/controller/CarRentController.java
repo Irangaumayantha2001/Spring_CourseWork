@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class CarRentController {
 
     @Autowired
-    CarRentService service;
+   private CarRentService service;
 
     @GetMapping
     public ResponseUtil getAllCarRents(){

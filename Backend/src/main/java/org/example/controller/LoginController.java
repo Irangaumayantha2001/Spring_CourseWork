@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 public class LoginController {
     @Autowired
-    LoginService service;
+    private LoginService service;
 
     @GetMapping(path = "/getLastLogin",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getLastLoginId(){

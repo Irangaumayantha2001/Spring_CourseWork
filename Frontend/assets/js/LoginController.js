@@ -46,9 +46,9 @@ function loginSave(userType, username, password) {
         }
     })
 }
-$(function () {
+
     getNewLoginId();
-});
+
 function getNewLoginId() {
     $.ajax({
         url: baseUrl + "api/v1/login/generateLogId",

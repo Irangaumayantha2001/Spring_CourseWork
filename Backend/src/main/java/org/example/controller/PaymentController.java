@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @CrossOrigin
 public class PaymentController {
     @Autowired
-    PaymentService service;
+   private PaymentService service;
 
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)

@@ -18,7 +18,7 @@ import java.io.IOException;
 public class CustomerController {
 
     @Autowired
-    CustomerService service;
+   private CustomerService service;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getAllCustomers() {
@@ -35,13 +35,13 @@ public class CustomerController {
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
         service.updateCustomer(dto);
-        return new ResponseUtil(200, "Updated", true);
+        return new ResponseUtil(200, "Updated", null);
     }
 
     @DeleteMapping(params = {"id"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil deleteCustomer(@RequestParam String id) {
         service.deleteCustomer(id);
-        return new ResponseUtil(200, "Deleted", true);
+        return new ResponseUtil(200, "Deleted", null);
     }
 
     @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -91,7 +91,7 @@ public class CustomerController {
     @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil uploadImagesAndPath(@RequestPart("nicf") MultipartFile nicf, @RequestPart("nicb") MultipartFile nicb, @RequestPart("licenceImg") MultipartFile licenceImg, @PathVariable String id) {
         try {
-            String projectPath = String.valueOf(new File("/D:/GDSE/2nd sem Final/Easy-Car-Rent-System/Front_End/savedImages"));
+            String projectPath = String.valueOf(new File("/home/iranga/Documents/IJSE Coursework/Spring_courseWork/CAr-Rental-System/Frontend/savedImages/"));
             File uploadsDir = new File(projectPath + "/Customers");
             uploadsDir.mkdir();
             nicf.transferTo(new File(uploadsDir.getAbsolutePath() + "/" + nicf.getOriginalFilename()));
