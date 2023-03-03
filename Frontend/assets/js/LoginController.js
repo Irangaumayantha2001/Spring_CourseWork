@@ -9,6 +9,7 @@ var baseUrl = "http://localhost:8080/Backend_war/";
 
 
 function loginUser(){
+    getNewLoginId();
     var username=$('#userName').val();
     var password=$('#password').val();
     var userType = $('#cmbType').find('option:selected').text();
@@ -47,7 +48,7 @@ function loginSave(userType, username, password) {
     })
 }
 
-    getNewLoginId();
+
 
 function getNewLoginId() {
     $.ajax({

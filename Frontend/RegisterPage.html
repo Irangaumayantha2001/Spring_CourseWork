@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/RegisterPage.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+
+    
+                
+            </div>
+            <div class="col-md-9 register-right">
+             
+        </select>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Apply </h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <form id="customerForm">
+                                    <section id="sec1">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtUserID">User ID</label>
+                                            <input disabled class="form-control" id="txtUserID" name="id" placeholder="User ID" type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtName">Name</label>
+                                            <input class="form-control" id="txtName" name="name" placeholder="Ex : Iranga Umayantha"
+                                                   type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtAddress">Address</label>
+                                            <input class="form-control" id="txtAddress" name="address" placeholder="Ex :Balapitiya"
+                                                   type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtContact">Contact No</label>
+                                            <input class="form-control" id="txtContact" name="Contact" placeholder="Ex :071/076 *******"
+                                                   type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtEmail">Email</label>
+                                            <input class="form-control" id="txtEmail" name="Email" placeholder="Email"
+                                                   type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtNIC">NIC No</label>
+                                            <input class="form-control" id="txtNIC" name="NIC" placeholder="NIC No"
+                                                   type="text">
+                                        </div>
+                                    </section>
+                                    <section id="sec2">
+                                        <div class="mb-3">
+                                             <div class="mb-3">
+                                                <select aria-label="Default select example" class="form-select" id="cmbType"
+                                                name="type">
+                                            <option selected>None</option>
+                                            <option value="1">Admin</option>
+                                            <option value="2">Customer</option>
+                                        </select>
+                                        </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" id="imgNiCFront" name="imgFrontView" type="file">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" id="imgNiCBack" name="imgBackView" type="file">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtLicene">Licence No</label>
+                                            <input class="form-control" id="txtLicene" name="Licence" placeholder="Licence No"
+                                                   type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" id="imgLicence" name="imgLicence" type="file">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtUserName">User Name</label>
+                                            <input class="form-control" id="txtUserName" name="UserName" placeholder="User Name"
+                                                   type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="txtPassword">Password</label>
+                                            <input class="form-control" id="txtPassword" name="Password" placeholder="Password"
+                                                   type="text">
+                                        </div>
+                                        <button class="btn" id="registerBtn" type="button">Register</button>
+                                    </section>
+
+                         
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/RegisterController.js"></script>
+</body>
+</html>

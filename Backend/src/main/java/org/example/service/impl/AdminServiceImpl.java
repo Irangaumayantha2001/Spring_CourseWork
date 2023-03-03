@@ -57,6 +57,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean findAdminByUserName(String username) {
+        System.out.println(repo.findAdminByUsername(username).isPresent());
         return repo.findAdminByUsername(username).isPresent();
     }
 

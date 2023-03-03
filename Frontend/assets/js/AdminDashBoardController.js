@@ -87,14 +87,7 @@ function searchPaymentByDate() {
         },
         error: function (ob) {
             loadAllPayments();
-            clearPaymentDateFields();
-            swal({
-                title: "Error!",
-                text: "Payments Not Found",
-                icon: "error",
-                button: "Close",
-                timer: 2000
-            });
+
         }
     })
 }

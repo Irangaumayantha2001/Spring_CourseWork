@@ -67,7 +67,7 @@ public class CustomerController {
         return new ResponseUtil(200, "Ok", service.findCustomerByUsernameAndPassword(username, password));
     }
 
-    @GetMapping(path = "/generateCustomerId", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/generateCustomerId")
     public ResponseUtil generateCustomerId() {
         return new ResponseUtil(200, "Ok", service.generateCustomerId());
     }
@@ -89,7 +89,7 @@ public class CustomerController {
     }
 
     @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil uploadImagesAndPath(@RequestPart("nicf") MultipartFile nicf, @RequestPart("nicb") MultipartFile nicb, @RequestPart("licenceImg") MultipartFile licenceImg, @PathVariable String id) {
+    public ResponseUtil uploadImagesAndPath(@RequestPart("nicf") MultipartFile nicf, @RequestPart("nicb") MultipartFile nicb, @RequestPart("licenceImg") MultipartFile licenceImg , @PathVariable String id) {
         try {
             String projectPath = String.valueOf(new File("/home/iranga/Documents/IJSE Coursework/Spring_courseWork/CAr-Rental-System/Frontend/savedImages/"));
             File uploadsDir = new File(projectPath + "/Customers");
