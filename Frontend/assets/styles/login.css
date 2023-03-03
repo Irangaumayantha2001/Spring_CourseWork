@@ -1,0 +1,42 @@
+.register{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    margin-top: 3%;
+    padding: 3%;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-right h3{
+   top: 300px;
+}
+
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+
+#h1{
+    margin-left: 350px;
+    top: -187px;
+    font-size: 50px;
+}
+
+#customerForm{
+    margin-left: 200px;
+    width: max-content;
+    margin-top: -100px;
+}
+
+hr{
+    left: 100px;
+    width: 800px;
+    position: relative;
+    
+}
