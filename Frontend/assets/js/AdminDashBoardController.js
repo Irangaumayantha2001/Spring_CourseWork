@@ -22,6 +22,27 @@ function getRegisterCustomersCount() {
     })
 }
 
+function getCountAvailabilityDriver() {
+
+    $.ajax({
+        url: baseUrl + "/count/{availability}",
+        method: "GET",
+        success: function (res) {
+
+            if (res.data != 0) {
+                if (res.data < 10) {
+                    $('#countAvailableDrivers').text("0" + res.data);
+                } else {
+                    $('#countAvailableDrivers').text(res.data);
+                }
+            } else {
+                $('#countAvailableDrivers').text("00");
+            }
+
+        }
+    })
+}
+
 
 
 

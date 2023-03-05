@@ -126,6 +126,7 @@ public class CustomerServiceImpl implements CustomerService {
     public void uploadCustomerImages(String nicfPath, String nicbPath, String licenceImgPath, String id) {
         if (repo.existsById(id)) {
             repo.updateCustomerFilePaths(nicfPath, nicbPath, licenceImgPath, id);
+            setImagePaths(nicfPath, nicbPath, licenceImgPath, id);
         } else {
             throw new RuntimeException("Customer Not Found");
         }
@@ -134,5 +135,14 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public int getCountOfCustomersRegistered() {
         return repo.countByCustomerId();
+    }
+
+    @Override
+    public void setImagePaths(String nicfPath, String nicbPath, String licenceImgPath, String id) {
+        Customer customer = repo.findById(id).get();
+        customer.setNicFrontImg(nicfPath);
+        customer.setNicBackImg(nicbPath);
+        customer.setLicenceImg(licenceImgPath);
+        repo.save(customer);
     }
 }

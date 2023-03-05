@@ -18,7 +18,7 @@ import java.io.IOException;
 public class CustomerController {
 
     @Autowired
-   private CustomerService service;
+    private CustomerService service;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getAllCustomers() {
@@ -89,7 +89,7 @@ public class CustomerController {
     }
 
     @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil uploadImagesAndPath(@RequestPart("nicf") MultipartFile nicf, @RequestPart("nicb") MultipartFile nicb, @RequestPart("licenceImg") MultipartFile licenceImg , @PathVariable String id) {
+    public ResponseUtil uploadImagesAndPath(@RequestPart("nicf") MultipartFile nicf, @RequestPart("nicb") MultipartFile nicb, @RequestPart("licenceImg") MultipartFile licenceImg, @PathVariable String id) {
         try {
             String projectPath = String.valueOf(new File("/home/iranga/Documents/IJSE Coursework/Spring_courseWork/CAr-Rental-System/Frontend/savedImages/"));
             File uploadsDir = new File(projectPath + "/Customers");
@@ -104,6 +104,7 @@ public class CustomerController {
 
             service.uploadCustomerImages(nicfPath, nicbPath, licenceImgPath, id);
 
+
             return new ResponseUtil(200, "Uploaded", true);
 
         } catch (IOException e) {
@@ -112,8 +113,8 @@ public class CustomerController {
         }
     }
 
-    @GetMapping(path = "/count",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil getCountOfRegisteredCustomers(){
-        return new ResponseUtil(200,"Ok",service.getCountOfCustomersRegistered());
+    @GetMapping(path = "/count", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getCountOfRegisteredCustomers() {
+        return new ResponseUtil(200, "Ok", service.getCountOfCustomersRegistered());
     }
 }

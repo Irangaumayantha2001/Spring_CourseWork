@@ -32,4 +32,6 @@ public interface CustomerService {
     void uploadCustomerImages(String nicfPath, String nicbPath, String licenceImgPath, String id);
 
     int getCountOfCustomersRegistered();
+
+    void setImagePaths(String nicfPath, String nicbPath, String licenceImgPath, String id);
 }
