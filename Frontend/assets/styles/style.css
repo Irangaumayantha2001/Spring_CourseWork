@@ -1,18 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -31,7 +17,6 @@
   --alice-blue-4: hsl(217, 33%, 92%);
   --independence: hsl(219, 21%, 39%);
   --deep-cerise: hsl(329, 63%, 52%);
-  --eerie-black: hsl(210, 11%, 15%);
   --space-cadet: hsl(240, 22%, 25%);
   --blue-jeans: hsl(204, 80%, 63%);
   --slate-blue: hsl(262, 60%, 57%);
@@ -365,42 +350,7 @@ button, a { transition: var(--transition); }
 
 .hero-banner { display: none; }
 
-.hero-form {
-  background: var(--gradient);
-  border: 1px solid var(--white);
-  box-shadow: var(--shadow-1);
-  border-radius: var(--radius-18);
-  font-family: var(--ff-nunito);
-}
 
-.input-wrapper { padding: 15px 20px; }
-
-.input-wrapper:not(:last-of-type) { border-bottom: 1px solid hsla(0, 0%, 0%, 0.08); }
-
-.input-label {
-  color: var(--manatee);
-  font-size: var(--fs-6);
-  margin-bottom: 10px;
-}
-
-.input-field {
-  color: var(--space-cadet);
-  outline: 2px solid transparent;
-  outline-offset: 5px;
-  border-radius: 4px;
-  transition: var(--transition);
-}
-
-.input-field:focus { outline-color: var(--carolina-blue); }
-
-.input-field::placeholder { color: var(--independence); }
-
-.hero-form .btn {
-  --width: calc(100% - 40px);
-  --height: 50px;
-  margin: 20px;
-  text-transform: uppercase;
-}
 
 
 
@@ -656,82 +606,6 @@ button, a { transition: var(--transition); }
 
 
 
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
-
-.blog .section-title { margin-bottom: 30px; }
-
-.blog-card {
-  background: var(--alice-blue-2);
-  border-radius: var(--radius-18);
-  border: 1px solid var(--white);
-  box-shadow: var(--shadow-1);
-  overflow: hidden;
-}
-
-.blog-card .card-banner {
-  aspect-ratio: 3 / 2;
-  position: relative;
-  overflow: hidden;
-}
-
-.blog-card .card-banner a:first-child { height: 100%; }
-
-.blog-card .card-banner img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.blog-card .card-badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  --height: 30px;
-  --width: 92px;
-}
-
-.blog-card .card-content { padding: 20px; }
-
-.blog-card .card-title { margin-bottom: 20px; }
-
-.blog-card .card-title > a { color: inherit; }
-
-.blog-card .card-title > a:is(:hover, :focus) { color: var(--carolina-blue); }
-
-.blog-card .card-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.blog-card :is(.publish-date, .comments) {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: var(--fs-6);
-  color: var(--independence);
-}
-
-.blog-card :is(.publish-date, .comments) ion-icon {
-  font-size: 15px;
-  --ionicon-stroke-width: 50px;
-}
-
-.blog .has-scrollbar {
-  display: flex;
-  gap: 20px;
-  scroll-snap-type: inline mandatory;
-  overflow-x: auto;
-  padding-bottom: 20px;
-}
-
-.blog .has-scrollbar > li {
-  flex-shrink: 0;
-  max-width: 330px;
-  width: 100%;
-  scroll-snap-align: start;
-}
 
 .has-scrollbar::-webkit-scrollbar-track {
   background: var(--alice-blue-1);
@@ -983,7 +857,7 @@ button, a { transition: var(--transition); }
 
   .hero-banner {
     display: block;
-    background: url("../images/hero-banner.jpg") no-repeat;
+    background: url("../images/bg_3.jpg") no-repeat;
     background-size: cover;
     background-position: left;
     position: absolute;

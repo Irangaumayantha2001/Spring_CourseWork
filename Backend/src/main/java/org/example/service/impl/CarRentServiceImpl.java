@@ -1,7 +1,10 @@
 package org.example.service.impl;
 
 import org.example.dto.CarRentDTO;
+import org.example.entity.Car;
 import org.example.entity.CarRent;
+import org.example.entity.Customer;
+import org.example.entity.Driver;
 import org.example.repo.CarRentRepo;
 import org.example.service.CarRentService;
 import org.modelmapper.ModelMapper;
@@ -26,7 +29,7 @@ public class CarRentServiceImpl implements CarRentService {
     @Override
     public void addCarRent(CarRentDTO dto) {
         if (!repo.existsById(dto.getRentId())) {
-            repo.save(mapper.map(dto, CarRent.class));
+            repo.save(new CarRent(dto.getRentId(),dto.getDate(),dto.getPickUpDate(),dto.getReturnDate(),dto.getStatus(),new Customer(dto.getCustomer().getCustomerId()),new Car(dto.getCar().getRegistrationNO()),new Driver(dto.getDriver().getLicenceNo())));
         } else {
             throw new RuntimeException("Booking Already Exists...");
         }

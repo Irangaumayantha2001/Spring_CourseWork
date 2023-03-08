@@ -24,5 +24,5 @@ public class CustomerDTO {
     private String licenceImg;
     private String username;
     private String password;
-    private final String status = "Pending";
+    private  String status;
 }

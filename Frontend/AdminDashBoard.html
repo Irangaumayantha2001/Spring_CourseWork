@@ -994,9 +994,11 @@
                         <div class="row ms-0 me-0">
                             <div class="col-2">
                                 <div class="mb-3">
-                                    <label for="txtSearchRegistrationNo" class="form-label mb-0">Registration No</label>
-                                    <input type="text" class="form-control" id="txtSearchRegistrationNo"
-                                           name="searchRegistrationNo">
+                                    <label for="cmbCarRegistrationNo" class="form-label mb-0">Registration No</label>
+                                    <select class="form-select" aria-label="Default select example"
+                                            id="cmbCarRegistrationNo"
+                                            name="carRegNo">
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -1182,7 +1184,7 @@
         </div>
     </div>
 </main>
-
+scrollFunction()
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
@@ -1191,6 +1193,7 @@
 <script src="assets/js/CustomerController.js"></script>
 <script src="assets/js/CarController.js"></script>
 <script src="assets/js/CustomerDashBoardController.js"></script>
+<script src="assets/js/Maintains.js">
 <script>
 
     var navbar = document.getElementById("navSection");

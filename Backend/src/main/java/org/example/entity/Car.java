@@ -45,4 +45,6 @@ public class Car {
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<Maintenance> maintenances = new ArrayList<>();
 
+    public Car(String registrationNO) {
+    }
 }

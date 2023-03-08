@@ -21,10 +21,10 @@ public class CarRentController {
         return new ResponseUtil(200,"ok",service.getAllCarRents());
     }
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping
     public ResponseUtil addCarRent(@RequestBody CarRentDTO dto) {
         System.out.println(dto.toString());
-        service.addCarRent(dto);
+       service.addCarRent(dto);
         return new ResponseUtil(200, "Saved", true);
     }
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)

@@ -280,9 +280,9 @@ function addCarRent(customer, car, driver) {
 
     var carRent = {
         rentId: rentId,
-        date: today,
-        pickUpDate: pickupDate,
-        returnDate: returnDate,
+        date: today.toString(),
+        pickUpDate: pickupDate.toString(),
+        returnDate: returnDate.toString(),
         status: status,
         customer: customer,
         car: car,

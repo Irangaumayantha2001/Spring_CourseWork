@@ -30,4 +30,7 @@ public class Driver {
 
     @OneToMany(mappedBy = "driver",cascade = CascadeType.ALL)
     private List<CarRent> rentals = new ArrayList<>();
+
+    public Driver(String licenceNo) {
+    }
 }

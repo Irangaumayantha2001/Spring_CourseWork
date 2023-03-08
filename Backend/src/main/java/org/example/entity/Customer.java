@@ -40,4 +40,6 @@ public class Customer {
     private List<Payment> payments = new ArrayList<>();
 
 
+    public Customer(String customerId) {
+    }
 }
